@@ -24,7 +24,7 @@ async function scrollThrough(page: Page) {
 test('home renders all sections without errors or horizontal overflow', async ({ page }) => {
   const errors = trackErrors(page)
   await page.goto('/')
-  await expect(page).toHaveTitle('Satya Mahesh Indugula | Software Engineer & Full-Stack Developer')
+  await expect(page).toHaveTitle('Satya Mahesh Indugula – Software Engineer')
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Building Scalable Systems')
   for (const id of ['about', 'ecosystem', 'experience', 'skills', 'what-i-build', 'ai-assisted', 'projects', 'ismool', 'resume', 'contact'])
     await expect(page.locator(`section#${id}`)).toBeAttached()

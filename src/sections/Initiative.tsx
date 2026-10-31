@@ -20,7 +20,7 @@ export function Initiative() {
             </h2>
             <p className="mt-5 text-base leading-relaxed text-fg-muted md:text-lg">{ismool.summary}</p>
             <p className="mt-4 text-sm leading-relaxed text-fg-subtle">
-              ismool is separate from my engineering career and this personal portfolio. It is where I apply the same habits
+              ismool is separate from my engineering career and this portfolio. It is where I apply the same habits
               of clear scope, maintainable code and testing before launch to digital products for businesses.
             </p>
             <ul className="mt-6 grid gap-2 text-sm text-fg-muted sm:grid-cols-2">

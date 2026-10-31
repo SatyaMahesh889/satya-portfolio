@@ -1,6 +1,6 @@
 # Deployment: Cloudflare Pages
 
-This site is a static build, deployed as its own Cloudflare Pages project (`satya-personal-portfolio`). It is independent of the separately hosted project websites it links to. Deploying it does not change them.
+This site is a static build, deployed as its own Cloudflare Pages project (`satyamahesh-portfolio`). It is independent of the separately hosted project websites it links to. Deploying it does not change them.
 
 ## 1. Build settings
 
@@ -28,8 +28,8 @@ Cloudflare installs dependencies from `package-lock.json` before running the bui
 ```bash
 npm run build
 npx wrangler login
-npx wrangler pages project create satya-personal-portfolio   # first time only
-npx wrangler pages deploy dist --project-name satya-personal-portfolio
+npx wrangler pages project create satyamahesh-portfolio   # first time only
+npx wrangler pages deploy dist --project-name satyamahesh-portfolio
 ```
 
 Remember to set `VITE_*` variables in your shell or `.env` **before** `npm run build`, because they are baked in at build time.
@@ -40,7 +40,7 @@ All optional, all public (they end up in client JavaScript). Never put secrets i
 
 | Variable | Effect |
 | --- | --- |
-| `VITE_SITE_URL` | The production origin, without a trailing slash. Use `https://satya-personal-portfolio.pages.dev` at first, and switch to the custom domain once one is connected. Enables canonical links, `og:url`, absolute OG images, JSON-LD `url`, and `sitemap.xml`. |
+| `VITE_SITE_URL` | The production origin, without a trailing slash. Use `https://satyamahesh-portfolio.pages.dev` at first, and switch to the custom domain once one is connected. Enables canonical links, `og:url`, absolute OG images, JSON-LD `url`, and `sitemap.xml`. |
 | `VITE_CONTACT_EMAIL` | Overrides the default public email (maheshindugula@gmail.com) |
 | `VITE_WHATSAPP_NUMBER` | Digits only, e.g. `919876543210`. Shows a WhatsApp card. |
 | `VITE_RESUME_URL` | `/resume/<file>.pdf` (place the PDF in `public/resume/`) or an absolute URL. Shows the download button. |

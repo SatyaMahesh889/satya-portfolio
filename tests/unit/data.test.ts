@@ -104,3 +104,25 @@ describe('removed GitHub showcase regression', () => {
       expect(publicText, String(term)).not.toMatch(term)
   })
 })
+
+describe('branding', () => {
+  const read = (f: string) => readFileSync(join(__dirname, '../..', f), 'utf8')
+  const files = (dir: string): string[] =>
+    readdirSync(dir, { withFileTypes: true }).flatMap((d): string[] => (d.isDirectory() ? files(join(dir, d.name)) : [join(dir, d.name)]))
+  const publicText = [...files(join(__dirname, '../../src')), join(__dirname, '../../index.html')].map((f) => readFileSync(f, 'utf8')).join('\n')
+
+  it('uses the Satya Portfolio brand and Software Engineer title', () => {
+    const html = read('index.html')
+    expect(html).toContain('<title>Satya Mahesh Indugula – Software Engineer</title>')
+    expect(html).toContain('<meta property="og:site_name" content="Satya Portfolio" />')
+    expect(html).toContain('<meta property="og:title" content="Satya Mahesh Indugula – Software Engineer" />')
+    expect(html).toContain('<meta name="twitter:title" content="Satya Mahesh Indugula – Software Engineer" />')
+  })
+
+  it('does not describe the site as a "personal portfolio" or use the old project name', () => {
+    for (const text of [publicText, read('README.md'), read('DEPLOYMENT.md'), read('package.json')]) {
+      expect(text).not.toMatch(/personal portfolio/i)
+      expect(text).not.toMatch(/satya-personal-portfolio/)
+    }
+  })
+})

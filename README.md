@@ -1,6 +1,6 @@
-# Satya Mahesh Indugula — Personal Portfolio
+# Satya Portfolio
 
-Source code for the personal portfolio of **Satya Mahesh Indugula**, Software Engineer | Full-Stack Developer | Digital Solutions.
+Source code for the portfolio website of **Satya Mahesh Indugula**, Software Engineer | Full-Stack Developer | Digital Solutions.
 
 The site covers my engineering experience and technology ecosystem, my approach to AI-assisted development, three independent website projects with case studies, and **ismool**, my separate independent initiative. It is a static single-page app with pre-rendered case-study routes, deployed on Cloudflare Pages.
 
@@ -61,7 +61,7 @@ Connect this repository to Cloudflare Pages with Git integration (**Workers & Pa
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 | Environment variable | `NODE_VERSION=22.23.3` |
-| Environment variable | `VITE_SITE_URL=<production origin>`, for example `https://satya-personal-portfolio.pages.dev`. This enables canonical URLs, `og:url` and the sitemap. |
+| Environment variable | `VITE_SITE_URL=<production origin>`, for example `https://satyamahesh-portfolio.pages.dev`. This enables canonical URLs, `og:url` and the sitemap. |
 
 Every push to `main` triggers a production deployment, and other branches and pull requests get preview URLs. `VITE_*` values are compiled into the client bundle, so they must never hold secrets. See [DEPLOYMENT.md](DEPLOYMENT.md) for routing, optional variables and custom domains.
 

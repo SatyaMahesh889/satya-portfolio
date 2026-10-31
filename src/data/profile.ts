@@ -34,7 +34,7 @@ export const profile = {
   },
 
   seo: {
-    title: 'Satya Mahesh Indugula | Software Engineer & Full-Stack Developer',
+    title: 'Satya Mahesh Indugula – Software Engineer',
     description:
       'Satya Mahesh Indugula is a software engineer and full-stack developer building scalable backend services, responsive web applications, and complete digital experiences.',
   },
